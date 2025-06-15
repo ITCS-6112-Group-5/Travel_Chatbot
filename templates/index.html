@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NaviBlu Travel Planner</title>
+</head>
+<body>
+    <h1>Welcome to NaviBlu Travel Planner</h1>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Ask something..." required>
+        <button type="submit">Send</button>
+    </form>
+    <div id="chat-response"></div>
+
+    <script>
+        const form = document.getElementById('chat-form');
+        const input = document.getElementById('user-input');
+        const responseDiv = document.getElementById('chat-response');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const res = await fetch('/api/message', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ message: input.value })
+            });
+            const data = await res.json();
+            responseDiv.innerText = data.response;
+            input.value = '';
+        });
+    </script>
+</body>
+</html>
