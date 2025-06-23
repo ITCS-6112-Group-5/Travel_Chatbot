@@ -10,13 +10,7 @@ load_dotenv()
 
 st.title("NaviBlu Travel Assistant")
 
-# Set OpenAI API key from Streamlit secrets
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-
-# Set a default openai model
-if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-3.5-turbo"
 
 # Set a default LLM model from Groq
 if "LLM_model" not in st.session_state:
