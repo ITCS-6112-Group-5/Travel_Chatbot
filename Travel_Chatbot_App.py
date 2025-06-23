@@ -10,6 +10,7 @@ load_dotenv()
 
 st.title("NaviBlu Travel Assistant")
 
+# Establish groq client
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 # Set a default LLM model from Groq
