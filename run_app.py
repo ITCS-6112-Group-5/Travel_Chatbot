@@ -2,4 +2,4 @@
 
 import os
 
-os.system('streamlit run Travel_Chatbot_app.py')
+os.system('streamlit run Travel_Chatbot_App.py')
