@@ -2,30 +2,23 @@
 
 
 import streamlit as st
-from groq import Groq
 import os
 from dotenv import load_dotenv
 from chatbot_core import Chatbot
 
 load_dotenv()
 
-# Establish groq client
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-# Set a default LLM model from Groq in session state
-if "LLM_model" not in st.session_state:
-    st.session_state["LLM_model"] = "llama-3.3-70b-versatile"
-
-# Initialize chat history in session state
+# Initialize chat history in streamlit session state
 if "messages" not in st.session_state or st.session_state.messages is None:
     st.session_state.messages = []
 
 
-
-
-# Initialize chatbot object in session state
+# Initialize chatbot object in streamlit session state
 if "chatbot" not in st.session_state or st.session_state.chatbot is None:
     st.session_state.chatbot = Chatbot()
+
+
 
 
 # Streamlit ------------------------------------------------------------------------------
@@ -48,7 +41,7 @@ if prompt := st.chat_input("Type Here"):
     with st.chat_message("assistant"):
 
         # Call shared chatbot logic
-        response = st.session_state.chatbot.process_input(prompt, st.session_state["LLM_model"])
+        response = st.session_state.chatbot.process_input(prompt) # type: ignore
 
         # Display response in UI
         st.markdown(response)

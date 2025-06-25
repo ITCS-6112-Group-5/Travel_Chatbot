@@ -1,3 +1,4 @@
+amadeus
 streamlit
 groq
 python-dotenv

@@ -10,3 +10,4 @@ __pycache__/
 *.so
 .coverage
 .pytest_cache/
+testing_files/
