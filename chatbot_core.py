@@ -249,7 +249,7 @@ class Chatbot():
                 "city": three letter city iataCode,
                 "checkInDate": "YYY-MM-DD",
                 "checkOutDate": "YYY-MM-DD",
-                "numGuests": X
+                "numGuests": X  If no number is specified, assume it is 2
                 }}
                 """
         
