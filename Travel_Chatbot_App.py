@@ -1,11 +1,11 @@
-# Main script for travel chatbot
+# Script for the Streamlit Chatbot UI
 
 
 import streamlit as st
 import os
-from dotenv import load_dotenv
 from chatbot_core import Chatbot
 
+from dotenv import load_dotenv
 load_dotenv()
 
 
