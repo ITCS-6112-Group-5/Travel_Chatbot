@@ -115,7 +115,7 @@ class Chatbot():
         if ("location" in categories):
             self.location_info = self.location_agent()
 
-        if ("general" in categories):
+        if ("general" in categories or len(categories) == 0):
             self.general_info = self.general_info_agent()
         
 
