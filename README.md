@@ -1,6 +1,8 @@
 # NaviBlu Travel_Chatbot
 AI chatbot to provide flight, hotel, and general travel information.
 
+Available here: https://naviblu-travel-chatbot.onrender.com/
+
 **Installation:**
 
 requires a .env file with:
