@@ -3,6 +3,8 @@ AI chatbot to provide flight, hotel, and general travel information.
 
 Available here: https://naviblu-travel-chatbot.onrender.com/
 
+<img src="website/images/For_Readme_1.png" alt="Logo" width="800"/>
+
 **Installation:**
 
 requires a .env file with:
